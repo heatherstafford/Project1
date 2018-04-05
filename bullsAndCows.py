@@ -10,30 +10,30 @@ RADIUS = 22
 def pickCode():
     num = randint(0,4)
     if num == 0: 
-        colg = Color(0x006600,1) #Green
+        col = Color(0x006600,1) #Green
     elif num == 1:
-        colr = Color(0xFF0000,1) #Red
+        col = Color(0xFF0000,1) #Red
     elif num == 2:
-        coly = Color(0xFFFF00,1) #yellow
+        col = Color(0xFFFF00,1) #yellow
     elif num == 3:
-        colp = Color(0xc300ff,1) #Purple
+        col = Color(0xc300ff,1) #Purple
     else:
-        colb = Color(0x003bff,1) #Blue
+        col = Color(0x003bff,1) #Blue
 
 def green(Event):
-    CirlceAsset(RADIUS,LineStyle(2,Color(0x000000,1), colg)
+    Sprite(CircleAsset(RADIUS, LineStyle(2,Color(0x006600,1)), colg))
     
 def red(Event):
-    CirlceAsset(RADIUS,LineStyle(2,Color(0x000000,1), colr)
+    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0xFF0000,1)), colr))
 
 def yellow(Event):
-    CirlceAsset(RADIUS,LineStyle(2,Color(0x000000,1),coly)
+    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0xFFFF00,1)),coly))
     
 def purple(Event):
-    CirlceAsset(RADIUS,LineStyle(2,Color(0x000000,1), colp)
+    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0xc300ff,1)), colp))
     
 def blue(Event):
-    CirlceAsset(RADIUS,LineStyle(2,Color(0x000000,1), colb)
+    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0x003bff,1)), colb))
     
     
 circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
