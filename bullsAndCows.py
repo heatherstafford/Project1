@@ -5,7 +5,9 @@
 from ggame import *
 from random import randint
 
-RADIUS = 22
+RADIUS = 20
+ROWS = 5
+COLS = 5
 
 def pickCode():
     num = randint(0,4)
@@ -40,6 +42,7 @@ if __name__ == '__main__':
     
     #hold variables in a dictionary
     data = {}
+    data['circle']
 
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
     
