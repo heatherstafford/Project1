@@ -21,19 +21,19 @@ def pickCode():
         col = Color(0x003bff,1) #Blue
 
 def green(Event):
-    Sprite(CircleAsset(RADIUS, LineStyle(2,Color(0x006600,1)), colg))
+    Sprite(CircleAsset(RADIUS, LineStyle(2,Color(0x006600,1)), Color(0x006600,1)))
     
 def red(Event):
-    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0xFF0000,1)), colr))
+    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0xFF0000,1)), Color(0xFF0000,1)))
 
 def yellow(Event):
-    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0xFFFF00,1)),coly))
+    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0xFFFF00,1)),Color(0xFFFF00,1)))
     
 def purple(Event):
-    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0xc300ff,1)), colp))
+    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0xc300ff,1)), Color(0xc300ff,1)))
     
 def blue(Event):
-    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0x003bff,1)), colb))
+    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0x003bff,1)), Color(0x003bff,1)))
     
     
 circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
