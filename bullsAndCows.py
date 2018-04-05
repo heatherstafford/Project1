@@ -10,22 +10,42 @@ RADIUS = 22
 def pickCode():
     num = randint(0,4)
     if num == 0: 
-        col = Color(0x006600,1) #Green
+        colg = Color(0x006600,1) #Green
     elif num == 1:
-        col = Color(0xFF0000,1) #Red
+        colr = Color(0xFF0000,1) #Red
     elif num == 2:
-        col = Color(0xFFFF00,1) #yellow
+        coly = Color(0xFFFF00,1) #yellow
     elif num == 3:
-        col = Color(0xc300ff,1) #Purple
+        colp = Color(0xc300ff,1) #Purple
     else:
-        col = Color(0x003bff,1) #Blue
+        colb = Color(0x003bff,1) #Blue
 
-
+def green(Event):
+    CirlceAsset(RADIUS,LineStyle(2,Color(0x000000,1), colg)
     
-circle = CircleAsset(RADIUS, LineStyle(2,Color(0x006600,1)),Color(0x006600,1))
+def red(Event):
+    CirlceAsset(RADIUS,LineStyle(2,Color(0x000000,1), colr)
+
+def yellow(Event):
+    CirlceAsset(RADIUS,LineStyle(2,Color(0x000000,1),coly)
+    
+def purple(Event):
+    CirlceAsset(RADIUS,LineStyle(2,Color(0x000000,1), colp)
+    
+def blue(Event):
+    CirlceAsset(RADIUS,LineStyle(2,Color(0x000000,1), colb)
+    
+    
+circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
     
 for i in range(4):
     for j in range(10):
         Sprite(circle,(10 + (2*RADIUS+10)*i,10 + (2*RADIUS+10)*j)) #putting a row of dots
+
+App().listenKeyEvent('keydown','g',green)
+App().listenKeyEvent('keydown','r', red)
+App().listenKeyEvent('keydown','y', yellow)
+App().listenKeyEvent('keydown','p', purple)
+App().listenKeyEvent('keydown','b', blue)
 
 App().run()
