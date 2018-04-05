@@ -5,7 +5,7 @@
 from ggame import *
 from random import randint
 
-RADIUS = 10
+RADIUS = 22
 
 def pickCode():
     num = randint(0,4)
@@ -20,15 +20,12 @@ def pickCode():
     else:
         col = Color(0x003bff,1) #Blue
 
-key=event.key
 
-def enterColor(Event):
-    if key = b:
     
-circle = CircleAsset(RADIUS, LineStyle(2,col),col)
+circle = CircleAsset(RADIUS, LineStyle(2,Color(0x006600,1)),Color(0x006600,1))
     
-for i in range(20):
-    for j in range(20):
+for i in range(4):
+    for j in range(10):
         Sprite(circle,(10 + (2*RADIUS+10)*i,10 + (2*RADIUS+10)*j)) #putting a row of dots
 
 App().run()
