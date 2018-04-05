@@ -38,7 +38,7 @@ def blue(Event):
     Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0x003bff,1)))
  
 def newColor():
-    data['color'] += ROWS
+    data['colors'] += ROWS
 
 #sets up and runs the game
 if __name__ == '__main__':  
