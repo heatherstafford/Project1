@@ -21,36 +21,36 @@ def pickCode():
         col = Color(0x003bff,1) #Blue
 
 def green(Event):
-    Sprite(CircleAsset(RADIUS, LineStyle(2,Color(0x006600,1)), Color(0x006600,1)))
+    Sprite(CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)), Color(0x006600,1)))
     
 def red(Event):
-    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0xFF0000,1)), Color(0xFF0000,1)))
+    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xFF0000,1)))
 
 def yellow(Event):
-    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0xFFFF00,1)),Color(0xFFFF00,1)))
+    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)),Color(0xFFFF00,1)))
     
 def purple(Event):
-    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0xc300ff,1)), Color(0xc300ff,1)))
+    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xc300ff,1)))
     
 def blue(Event):
-    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0x003bff,1)), Color(0x003bff,1)))
+    Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0x003bff,1)))
     
 #sets up and runs the game
 if __name__ == '__main__':  
     
-#hold variables in a dictionary
-data = {}
+    #hold variables in a dictionary
+    data = {}
 
-circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
+    circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
     
-for i in range(4):
-    for j in range(10):
-        Sprite(circle,(10 + (2*RADIUS+10)*i,10 + (2*RADIUS+10)*j)) #putting a row of dots
+    for i in range(4):
+        for j in range(10):
+            Sprite(circle,(10 + (2*RADIUS+10)*i,10 + (2*RADIUS+10)*j)) #putting a row of dots
 
-App().listenKeyEvent('keydown','g',green)
-App().listenKeyEvent('keydown','r', red)
-App().listenKeyEvent('keydown','y', yellow)
-App().listenKeyEvent('keydown','p', purple)
-App().listenKeyEvent('keydown','b', blue)
+    App().listenKeyEvent('keydown','g',green)
+    App().listenKeyEvent('keydown','r', red)
+    App().listenKeyEvent('keydown','y', yellow)
+    App().listenKeyEvent('keydown','p', purple)
+    App().listenKeyEvent('keydown','b', blue)
 
-App().run()
+    App().run()
