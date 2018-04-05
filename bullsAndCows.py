@@ -36,13 +36,16 @@ def purple(Event):
     
 def blue(Event):
     Sprite(CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0x003bff,1)))
-    
+ 
+def newColor():
+    data['color'] += ROWS
+
 #sets up and runs the game
 if __name__ == '__main__':  
     
     #hold variables in a dictionary
     data = {}
-    data['circle']
+    data['colors']
 
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
     
