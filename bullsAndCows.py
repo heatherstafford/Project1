@@ -26,30 +26,44 @@ def pickCode():
 def green(Event):
     greenCircle = (CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)), Color(0x006600,1)))
     Sprite(greenCircle,(ROWS,COLS))
+    updateRows
+    updateCols
+    
     
 #circle changes to red
 def red(Event):
     redCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xFF0000,1)))
     Sprite(redCircle,(ROWS,COLS))
+    updateRows
+    updateCols
     
 #circle changes to yellow
 def yellow(Event):
     yellowCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)),Color(0xFFFF00,1)))
     Sprite(yellowCircle,(ROWS,COLS))
+    updateRows
+    updateCols
     
 #circle changes to purple
 def purple(Event):
     purpleCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xc300ff,1)))
     Sprite(purpleCircle,(ROWS,COLS))
+    updateRows
+    updateCols
  
 #circle changes to blue   
 def blue(Event):
     blueCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0x003bff,1)))
     Sprite(blueCircle,(ROWS,COLS))
-    
-def newColor():
-    data['moves'] += ROWS
+    updateRows
+    updateCols
 
+def updateRows():
+    data['rows'] += ROWS
+    
+def updateCols():
+    data['cols'] += COLS
+    
 
 #sets up and runs the game
 if __name__ == '__main__':  
@@ -57,8 +71,8 @@ if __name__ == '__main__':
 
     #hold variables in a dictionary
     data = {}
-    data['moves'] = 0
-    data['bulls'] = 0
+    data['rows'] = ROWS
+    data['cols'] = COLS
     data['cows'] = 0
 
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
