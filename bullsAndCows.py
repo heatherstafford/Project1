@@ -25,27 +25,27 @@ def pickCode():
 #circle changes to green
 def green(Event):
     greenCircle = (CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)), Color(0x006600,1)))
-    Sprite(greenCircle,(updateRows,updateCols))
+    Sprite(greenCircle,(updateRows(),updateCols()))
     
 #circle changes to red
 def red(Event):
     redCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xFF0000,1)))
-    Sprite(redCircle,(updateRows,updateCols))
+    Sprite(redCircle,(updateRows(),updateCols()))
     
 #circle changes to yellow
 def yellow(Event):
     yellowCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)),Color(0xFFFF00,1)))
-    Sprite(yellowCircle,(updateRows,updateCols))
+    Sprite(yellowCircle,(updateRows(),updateCols()))
     
 #circle changes to purple
 def purple(Event):
     purpleCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xc300ff,1)))
-    Sprite(purpleCircle,(updateRows,updateCols))
+    Sprite(purpleCircle,(updateRows(),updateCols()))
  
 #circle changes to blue   
 def blue(Event):
     blueCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0x003bff,1)))
-    Sprite(blueCircle,(updateRows,updateCols))
+    Sprite(blueCircle,(updateRows(),updateCols()))
 
 def updateRows():
     data['rows'] += ROWS
