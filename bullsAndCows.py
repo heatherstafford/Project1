@@ -20,38 +20,42 @@ def pickCode():
     else:
         col = Color(0x003bff,1) #Blue
 
+#circle changes to green
 def green(Event):
     greenCircle = (CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)), Color(0x006600,1)))
     Sprite(greenCircle,(10,10))
     
+#circle changes to red
 def red(Event):
     redCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xFF0000,1)))
     Sprite(redCircle,(10,10))
     
+#circle changes to yellow
 def yellow(Event):
     yellowCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)),Color(0xFFFF00,1)))
     Sprite(yellowCircle,(10,10))
     
+#circle changes to purple
 def purple(Event):
     purpleCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xc300ff,1)))
     Sprite(purpleCircle,(10,10))
-    
+ 
+#circle changes to blue   
 def blue(Event):
     blueCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0x003bff,1)))
     Sprite(blueCircle,(10,10))
     
-    """
-def newColor():
-    data['moves'] += 25
-    """
+    
 #sets up and runs the game
 if __name__ == '__main__':  
 
-    """
+
     #hold variables in a dictionary
     data = {}
-    data['moves']
-    """
+    data['moves'] = 0
+    data['bulls'] = 0
+    data['cows'] = 0
+
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
     
     for i in range(4):
@@ -65,3 +69,4 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','b', blue)
 
     App().run()
+    
