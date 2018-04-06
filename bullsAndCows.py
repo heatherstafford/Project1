@@ -22,6 +22,14 @@ def pickCode():
     else:
         col = Color(0x003bff,1) #Blue
 
+def updateRows():
+    data['rows'] += ROWS
+    newRows = data['rows']
+
+def updateCols():
+    data['cols'] += COLS
+    newCols = data['cols']
+
 #circle changes to green
 def green(Event):
     greenCircle = (CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)), Color(0x006600,1)))
@@ -50,12 +58,6 @@ def blue(Event):
     blueCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0x003bff,1)))
     Sprite(blueCircle,(updateRows(),updateCols()))
 
-def updateRows():
-    newRows = data['rows'] += ROWS
-    
-def updateCols():
-    newCols = data['cols'] += COLS
-    
 
 #sets up and runs the game
 if __name__ == '__main__':  
