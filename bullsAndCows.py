@@ -55,6 +55,9 @@ def blue(Event):
 """
 def enter(Event):
     if num == 
+
+def checkCode():
+    if 
 """
 #sets up and runs the game
 if __name__ == '__main__':  
