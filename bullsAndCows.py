@@ -10,7 +10,7 @@ ROWS = 10
 COLS = 10
 
 def pickCode():
-    num = randint(0,4)
+    num = (randint(0,4), randint(0,4), randint(0,4), randint(0,4))
     if num == 0: 
         col = Color(0x006600,1) #Green
     elif num == 1:
@@ -21,52 +21,48 @@ def pickCode():
         col = Color(0xc300ff,1) #Purple
     else:
         col = Color(0x003bff,1) #Blue
-
-def updateRows():
-    data['rows'] += ROWS
-    newRows = data['rows']
-
-def updateCols():
-    data['cols'] += COLS
-    newCols = data['cols']
+    
 
 #circle changes to green
 def green(Event):
     greenCircle = (CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)), Color(0x006600,1)))
-    Sprite(greenCircle,(newRows,newCols))
-    if greenCircle.x == newRows and greenCircle.y == newCols:
-        updateRows
-        updateCols
+    Sprite(greenCircle,(data['rows'], data['cols']))
+    data['rows'] += 50
     
 #circle changes to red
 def red(Event):
     redCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xFF0000,1)))
-    Sprite(redCircle,(updateRows(),updateCols()))
+    Sprite(redCircle,(data['rows'], data['cols']))
+    data['rows'] += 50
     
 #circle changes to yellow
 def yellow(Event):
     yellowCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)),Color(0xFFFF00,1)))
-    Sprite(yellowCircle,(updateRows(),updateCols()))
+    Sprite(yellowCircle,(data['rows'], data['cols']))
+    data['rows'] += 50
     
 #circle changes to purple
 def purple(Event):
     purpleCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xc300ff,1)))
-    Sprite(purpleCircle,(updateRows(),updateCols()))
+    Sprite(purpleCircle,(data['rows'], data['cols']))
+    data['rows'] += 50
  
 #circle changes to blue   
 def blue(Event):
     blueCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0x003bff,1)))
-    Sprite(blueCircle,(updateRows(),updateCols()))
-
-
+    Sprite(blueCircle,(data['rows'], data['cols']))
+    data['rows'] += 50
+"""
+def enter(Event):
+    if num == 
+"""
 #sets up and runs the game
 if __name__ == '__main__':  
 
     #hold variables in a dictionary
     data = {}
-    data['rows'] = 0
-    data['cols'] = 0
-    data['cows'] = 0
+    data['rows'] = 10
+    data['cols'] = 10
 
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
     
@@ -79,6 +75,8 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','y', yellow)
     App().listenKeyEvent('keydown','p', purple)
     App().listenKeyEvent('keydown','b', blue)
-
+    """
+    App().listenKeyEvent('keydown','enter', enter)
+    """
     App().run()
     
