@@ -197,9 +197,6 @@ def checkCode():
     if data['code4'] == data['guess3']:
         data['cows'] += 1
 
-print(data['bulls'])
-print(data['cows'])
-
 #sets up and runs the game
 if __name__ == '__main__': 
 
@@ -217,6 +214,9 @@ if __name__ == '__main__':
     data['guess2'] = ''
     data['guess3'] = ''
     data['guess4'] = ''
+    
+    print(data['bulls'])
+    print(data['cows'])
 
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
     
