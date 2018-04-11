@@ -160,21 +160,23 @@ def blue(Event):
         break
 
 def enter(Event):
-    checkBulls()
-    checkCows()
+    checkCode1()
+    checkCode2()
+    checkCode3()
+    checkCode4()
     data['cols'] += 50
     data['rows'] -= 150
     
 #checks to see if the computers code is the same as the one entered
-def checkBulls():
+def checkCode1():
     if data['code1'] == data['guess1']:
         data['bulls'] += 1
-    elif data['code2'] == data['guess2']:
-        data['bulls'] += 1
-    elif data['code3'] == data['guess3']:
-        data['bulls'] += 1
-    elif data['code4'] == data['guess4']:
-        data['bulls'] += 1
+    elif data['code1'] == data['guess2']:
+        data['cows'] += 1
+    elif data['code1'] == data['guess3']:
+        data['cows'] += 1
+    elif data['code1'] == data['guess4']:
+        data['cows'] += 1
     else:
         data['bulls'] += 0
     print(data['bulls'])
