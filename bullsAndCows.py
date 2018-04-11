@@ -175,6 +175,7 @@ def checkBulls():
         data['bulls'] += 1
     else:
         data['bulls'] += 0
+    print(data['bulls'])
     
 def checkCows():
     if data['code1'] == data['guess2']:
@@ -203,6 +204,7 @@ def checkCows():
         data['cows'] += 1
     else:
         data['cows'] += 0
+    print(data['cows'])
 
 #sets up and runs the game
 if __name__ == '__main__': 
