@@ -63,8 +63,18 @@ def pickCode():
 def green(Event):
     greenCircle = (CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)), Color(0x006600,1)))
     Sprite(greenCircle,(data['rows'], data['cols']))
-    while data['rows'] < 20:
+    while data['rows'] < 10:
         data['guess1'] = 'Green'
+        break
+    while data['rows'] < 60:
+        data['guess2'] = 'Green'
+        break
+    while data['rows'] < 110:
+        data['guess1'] = 'Green'
+        break
+    while data['rows'] < 130:
+        data['guess1'] = 'Green'
+        break
     while data['rows'] < 120:
         data['rows'] += 50
         break
@@ -73,6 +83,18 @@ def green(Event):
 def red(Event):
     redCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xFF0000,1)))
     Sprite(redCircle,(data['rows'], data['cols']))
+    while data['rows'] < 10:
+        data['guess1'] = 'Red'
+        break
+    while data['rows'] < 60:
+        data['guess2'] = 'Red'
+        break
+    while data['rows'] < 110:
+        data['guess1'] = 'Red'
+        break
+    while data['rows'] < 130:
+        data['guess1'] = 'Red'
+        break
     while data['rows'] < 120:
         data['rows'] += 50
         break
@@ -81,6 +103,18 @@ def red(Event):
 def yellow(Event):
     yellowCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)),Color(0xFFFF00,1)))
     Sprite(yellowCircle,(data['rows'], data['cols']))
+    while data['rows'] < 10:
+        data['guess1'] = 'Yellow'
+        break
+    while data['rows'] < 60:
+        data['guess2'] = 'Yellow'
+        break
+    while data['rows'] < 110:
+        data['guess1'] = 'Yellow'
+        break
+    while data['rows'] < 130:
+        data['guess1'] = 'Yellow'
+        break
     while data['rows'] < 120:
         data['rows'] += 50
         break
@@ -89,6 +123,18 @@ def yellow(Event):
 def purple(Event):
     purpleCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xc300ff,1)))
     Sprite(purpleCircle,(data['rows'], data['cols']))
+    while data['rows'] < 10:
+        data['guess1'] = 'Purple'
+        break
+    while data['rows'] < 60:
+        data['guess2'] = 'Purple'
+        break
+    while data['rows'] < 110:
+        data['guess1'] = 'Purple'
+        break
+    while data['rows'] < 130:
+        data['guess1'] = 'Purple'
+        break
     while data['rows'] < 120:
         data['rows'] += 50
         break
@@ -97,6 +143,18 @@ def purple(Event):
 def blue(Event):
     blueCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0x003bff,1)))
     Sprite(blueCircle,(data['rows'], data['cols']))
+    while data['rows'] < 10:
+        data['guess1'] = 'Blue'
+        break
+    while data['rows'] < 60:
+        data['guess2'] = 'Blue'
+        break
+    while data['rows'] < 110:
+        data['guess1'] = 'Blue'
+        break
+    while data['rows'] < 130:
+        data['guess1'] = 'Blue'
+        break
     while data['rows'] < 120:
         data['rows'] += 50
         break
