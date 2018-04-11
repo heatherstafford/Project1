@@ -9,6 +9,7 @@ RADIUS = 20
 ROWS = 10
 COLS = 10
 
+#Computer randomly generates the colors for guessing
 def pickCode():
     num = (randint(0,4), randint(0,4), randint(0,4), randint(0,4))
     if num == 0: 
@@ -22,7 +23,6 @@ def pickCode():
     else:
         col = Color(0x003bff,1) #Blue
     
-
 #circle changes to green
 def green(Event):
     greenCircle = (CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)), Color(0x006600,1)))
@@ -33,7 +33,8 @@ def green(Event):
 def red(Event):
     redCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xFF0000,1)))
     Sprite(redCircle,(data['rows'], data['cols']))
-    data['rows'] += 50
+    While data['rows'] < 120:
+        data['rows'] += 50
     
 #circle changes to yellow
 def yellow(Event):
@@ -54,8 +55,9 @@ def blue(Event):
     data['rows'] += 50
 """
 def enter(Event):
-    if num == 
+    
 
+#checks to see if the computers code is the same as the one entered
 def checkCode():
     if 
 """
@@ -69,6 +71,7 @@ if __name__ == '__main__':
 
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
     
+    #Creates board of circles
     for i in range(4):
         for j in range(10):
             Sprite(circle,(10 + (2*RADIUS+10)*i,10 + (2*RADIUS+10)*j)) #putting a row of dots
