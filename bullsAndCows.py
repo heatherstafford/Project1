@@ -63,6 +63,8 @@ def pickCode():
 def green(Event):
     greenCircle = (CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)), Color(0x006600,1)))
     Sprite(greenCircle,(data['rows'], data['cols']))
+    while data['rows'] < 20:
+        data['guess1'] = 'Green'
     while data['rows'] < 120:
         data['rows'] += 50
         break
@@ -99,15 +101,17 @@ def blue(Event):
         data['rows'] += 50
         break
 
+"""
 def enter(Event):
     checkCode()
     
 #checks to see if the computers code is the same as the one entered
 def checkCode():
-    
+    if 
+"""
 
 #sets up and runs the game
-if __name__ == '__main__':  
+if __name__ == '__main__': 
 
     #hold variables in a dictionary
     data = {}
@@ -119,6 +123,10 @@ if __name__ == '__main__':
     data['code4'] = ''
     data['cows'] = 0
     data['bulls'] = 0
+    data['guess1'] = ''
+    data['guess2'] = ''
+    data['guess3'] = ''
+    data['guess4'] = ''
 
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
     
@@ -132,7 +140,8 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','y', yellow)
     App().listenKeyEvent('keydown','p', purple)
     App().listenKeyEvent('keydown','b', blue)
+    """
     App().listenKeyEvent('keydown','enter', enter)
-
+    """
     App().run()
     
