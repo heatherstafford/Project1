@@ -70,10 +70,10 @@ def green(Event):
         data['guess2'] = 'Green'
         break
     while data['rows'] < 110:
-        data['guess1'] = 'Green'
+        data['guess3'] = 'Green'
         break
     while data['rows'] < 130:
-        data['guess1'] = 'Green'
+        data['guess4'] = 'Green'
         break
     while data['rows'] < 120:
         data['rows'] += 50
@@ -90,7 +90,7 @@ def red(Event):
         data['guess2'] = 'Red'
         break
     while data['rows'] < 110:
-        data['guess1'] = 'Red'
+        data['guess3'] = 'Red'
         break
     while data['rows'] < 130:
         data['guess1'] = 'Red'
