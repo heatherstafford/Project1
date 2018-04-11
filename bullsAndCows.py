@@ -160,42 +160,49 @@ def blue(Event):
         break
 
 def enter(Event):
-    checkCode()
+    checkBulls()
+    checkCows()
     
 #checks to see if the computers code is the same as the one entered
-def checkCode():
+def checkBulls():
     if data['code1'] == data['guess1']:
         data['bulls'] += 1
-    if data['code2'] == data['guess2']:
+    elif data['code2'] == data['guess2']:
         data['bulls'] += 1
-    if data['code3'] == data['guess3']:
+    elif data['code3'] == data['guess3']:
         data['bulls'] += 1
-    if data['code4'] == data['guess4']:
+    elif data['code4'] == data['guess4']:
         data['bulls'] += 1
+    else:
+        data['bulls'] += 0
+    
+def checkCows():
     if data['code1'] == data['guess2']:
         data['cows'] += 1
-    if data['code1'] == data['guess3']:
+    elif data['code1'] == data['guess3']:
         data['cows'] += 1  
-    if data['code1'] == data['guess4']:
+    elif data['code1'] == data['guess4']:
         data['cows'] += 1
-    if data['code2'] == data['guess1']:
+    elif data['code2'] == data['guess1']:
         data['cows'] += 1
-    if data['code2'] == data['guess3']:
+    elif data['code2'] == data['guess3']:
         data['cows'] += 1
-    if data['code2'] == data['guess4']:
+    elif data['code2'] == data['guess4']:
         data['cows'] += 1
-    if data['code3'] == data['guess1']:
+    elif data['code3'] == data['guess1']:
         data['cows'] += 1
-    if data['code3'] == data['guess2']:
+    elif data['code3'] == data['guess2']:
         data['cows'] += 1
-    if data['code3'] == data['guess4']:
+    elif data['code3'] == data['guess4']:
         data['cows'] += 1
-    if data['code4'] == data['guess1']:
+    elif data['code4'] == data['guess1']:
         data['cows'] += 1
-    if data['code4'] == data['guess2']:
+    elif data['code4'] == data['guess2']:
         data['cows'] += 1
-    if data['code4'] == data['guess3']:
+    elif data['code4'] == data['guess3']:
         data['cows'] += 1
+    else:
+        data['cows'] += 0
 
 #sets up and runs the game
 if __name__ == '__main__': 
@@ -214,9 +221,7 @@ if __name__ == '__main__':
     data['guess2'] = ''
     data['guess3'] = ''
     data['guess4'] = ''
-    
-    print(data['bulls'])
-    print(data['cows'])
+
 
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
     
