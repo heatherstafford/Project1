@@ -237,8 +237,7 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','y', yellow)
     App().listenKeyEvent('keydown','p', purple)
     App().listenKeyEvent('keydown','b', blue)
-    """
     App().listenKeyEvent('keydown','enter', enter)
-    """
+    
     App().run()
     
