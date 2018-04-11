@@ -162,6 +162,7 @@ def blue(Event):
 def enter(Event):
     checkBulls()
     checkCows()
+    data['cols'] += COLS
     
 #checks to see if the computers code is the same as the one entered
 def checkBulls():
