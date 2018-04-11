@@ -93,7 +93,7 @@ def red(Event):
         data['guess3'] = 'Red'
         break
     while data['rows'] < 130:
-        data['guess1'] = 'Red'
+        data['guess4'] = 'Red'
         break
     while data['rows'] < 120:
         data['rows'] += 50
@@ -110,10 +110,10 @@ def yellow(Event):
         data['guess2'] = 'Yellow'
         break
     while data['rows'] < 110:
-        data['guess1'] = 'Yellow'
+        data['guess3'] = 'Yellow'
         break
     while data['rows'] < 130:
-        data['guess1'] = 'Yellow'
+        data['guess4'] = 'Yellow'
         break
     while data['rows'] < 120:
         data['rows'] += 50
@@ -130,10 +130,10 @@ def purple(Event):
         data['guess2'] = 'Purple'
         break
     while data['rows'] < 110:
-        data['guess1'] = 'Purple'
+        data['guess3'] = 'Purple'
         break
     while data['rows'] < 130:
-        data['guess1'] = 'Purple'
+        data['guess4'] = 'Purple'
         break
     while data['rows'] < 120:
         data['rows'] += 50
@@ -150,23 +150,28 @@ def blue(Event):
         data['guess2'] = 'Blue'
         break
     while data['rows'] < 110:
-        data['guess1'] = 'Blue'
+        data['guess3'] = 'Blue'
         break
     while data['rows'] < 130:
-        data['guess1'] = 'Blue'
+        data['guess4'] = 'Blue'
         break
     while data['rows'] < 120:
         data['rows'] += 50
         break
 
-"""
 def enter(Event):
     checkCode()
     
 #checks to see if the computers code is the same as the one entered
 def checkCode():
-    if 
-"""
+    if data['code1'] == data['guess1']:
+        data['bulls'] += 1
+    if data['code2'] == data['guess2']:
+        data['bulls'] += 1
+    if data['code3'] == data['guess3']:
+        data['bulls'] += 1
+    if data['code4'] == data['guess4']:
+        data['bulls'] += 1
 
 #sets up and runs the game
 if __name__ == '__main__': 
