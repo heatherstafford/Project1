@@ -143,24 +143,20 @@ def purple(Event):
 def blue(Event):
     blueCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0x003bff,1)))
     Sprite(blueCircle,(data['rows'], data['cols']))
-    while data['rows'] < 10:
+    if data['rows'] < 10:
         data['guess1'] = 'Blue'
-        break
-    while data['rows'] < 60:
+    elif data['rows'] < 60:
         data['guess2'] = 'Blue'
-        break
-    while data['rows'] < 110:
+    elif data['rows'] < 110:
         data['guess3'] = 'Blue'
-        break
-    while data['rows'] < 130:
+    elif data['rows'] < 130:
         data['guess4'] = 'Blue'
-        break
-    while data['rows'] < 120:
-        data['rows'] += 50
-        break
+    data['rows'] += 50
 
 #Makes the computer check the codes and move where the person is entering the color when enter is pressed
 def enter(Event):
+    data['bulls'] = 0
+    data['cows'] = 0
     checkCode1()
     checkCode2()
     checkCode3()
