@@ -215,36 +215,7 @@ def checkCode4():
         data['cows'] += 1
     else:
         data['bulls'] += 0
-    
-    
-def checkCows():
-    if data['code1'] == data['guess2']:
-        data['cows'] += 1
-    elif data['code1'] == data['guess3']:
-        data['cows'] += 1  
-    elif data['code1'] == data['guess4']:
-        data['cows'] += 1
-    elif data['code2'] == data['guess1']:
-        data['cows'] += 1
-    elif data['code2'] == data['guess3']:
-        data['cows'] += 1
-    elif data['code2'] == data['guess4']:
-        data['cows'] += 1
-    elif data['code3'] == data['guess1']:
-        data['cows'] += 1
-    elif data['code3'] == data['guess2']:
-        data['cows'] += 1
-    elif data['code3'] == data['guess4']:
-        data['cows'] += 1
-    elif data['code4'] == data['guess1']:
-        data['cows'] += 1
-    elif data['code4'] == data['guess2']:
-        data['cows'] += 1
-    elif data['code4'] == data['guess3']:
-        data['cows'] += 1
-    else:
-        data['cows'] += 0
-    print(data['cows'])
+
 
 #sets up and runs the game
 if __name__ == '__main__': 
