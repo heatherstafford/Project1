@@ -220,8 +220,8 @@ def checkCode4():
 def updateScore():
     data['cows'] += 1
     data['bulls'] += 1
-    data['cowbox'].destroy() #remove old writing
-    data['bullbox'].destroy()
+    data['cowScoreText'].destroy() #remove old writing
+    data['bullScoreText'].destroy()
     bullBox = TextAsset('Bulls = ' + str(data['bulls']))
     cowBox = TextAsset('Cows = ' + str(data['cows']))
 
@@ -251,8 +251,8 @@ if __name__ == '__main__':
         for j in range(10):
             Sprite(circle,(10 + (2*RADIUS+10)*i,10 + (2*RADIUS+10)*j)) #putting a row of dots
     
-    data['bullBox'] = TextAsset('Bulls = ' + str(data['bulls']))
-    data['cowBox'] = TextAsset('Cows = ' + str(data['cows']))
+    bullBox = TextAsset('Bulls = ' + str(data['bulls']))
+    cowBox = TextAsset('Cows = ' + str(data['cows']))
     data['bullScoreText'] = Sprite(bullBox,(200, 200))
     data['cowScoreText'] = Sprite(cowBox,(200, 100))
 
