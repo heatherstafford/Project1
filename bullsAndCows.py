@@ -185,6 +185,9 @@ def checkCode4():
     elif data['code4'] == data['guess3']:
         data['cows'] += 1
 
+if data['bulls'] == 4:
+    Sprite(winner)
+
 #makes the score appear on the screen
 def updateScore():
     data['bullscore'].destroy() 
@@ -214,6 +217,7 @@ if __name__ == '__main__':
 
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
     bullScore = TextAsset('Bulls = ' + str(data['bulls']))
+    winner = TextAsset('You Win!')
     cowScore = TextAsset('Cows = ' + str(data['cows']))
     data['bullscore'] = Sprite(bullScore, (200,200))
     data['cowscore'] = Sprite(cowScore, (200,150))
