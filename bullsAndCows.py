@@ -194,7 +194,6 @@ def updateScore():
     data['bullscore'] = Sprite(bullScore, (200,200))
     data['cowscore'] = Sprite(cowScore, (200,150))
 
-
 #sets up and runs the game
 if __name__ == '__main__': 
 
