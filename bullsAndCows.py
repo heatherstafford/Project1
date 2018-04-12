@@ -24,40 +24,49 @@ def pickCode():
         data['code1'] = 'Blue' #Blue
     
     num2 = randint(0,4)
-    if num2 == 0: 
-        data['code2'] = 'Green' #Green
-    elif num2 == 1:
-        data['code2'] = 'Red' #Red
-    elif num2 == 2:
-        data['code2'] = 'Yellow' #yellow
-    elif num2 == 3:
-        data['code2'] = 'Purple' #Purple
+    if num2 != num1:
+        if num2 == 0: 
+            data['code2'] = 'Green' #Green
+        elif num2 == 1:
+            data['code2'] = 'Red' #Red
+        elif num2 == 2:
+            data['code2'] = 'Yellow' #yellow
+        elif num2 == 3:
+            data['code2'] = 'Purple' #Purple
+        else:
+            data['code2'] = 'Blue' #Blue
     else:
-        data['code2'] = 'Blue' #Blue
+        num2 = randint(0,4)
         
     num3 = randint(0,4)
-    if num3 == 0: 
-        data['code3'] = 'Green' #Green
-    elif num3 == 1:
-        data['code3'] = 'Red' #Red
-    elif num3 == 2:
-        data['code3'] = 'Yellow' #yellow
-    elif num3 == 3:
-        data['code3'] = 'Purple' #Purple
+    if num3 != num1 and num3 != num2:
+        if num3 == 0: 
+            data['code3'] = 'Green' #Green
+        elif num3 == 1:
+            data['code3'] = 'Red' #Red
+        elif num3 == 2:
+            data['code3'] = 'Yellow' #yellow
+        elif num3 == 3:
+            data['code3'] = 'Purple' #Purple
+        else:
+            data['code3'] = 'Blue' #Blue
     else:
-        data['code3'] = 'Blue' #Blue
+        num3 = randint(0,4)
         
     num4 = randint(0,4)
-    if num4 == 0: 
-        data['code4'] = 'Green' #Green
-    elif num4 == 1:
-        data['code4'] = 'Red' #Red
-    elif num4 == 2:
-        data['code4'] = 'Yellow' #yellow
-    elif num4 == 3:
-        data['code4'] = 'Purple' #Purple
+    if num4 != num1 and num4 =! num2 and num4 != num3:
+        if num4 == 0: 
+            data['code4'] = 'Green' #Green
+        elif num4 == 1:
+            data['code4'] = 'Red' #Red
+        elif num4 == 2:
+            data['code4'] = 'Yellow' #yellow
+        elif num4 == 3:
+            data['code4'] = 'Purple' #Purple
+        else:
+            data['code4'] = 'Blue' #Blue
     else:
-        data['code4'] = 'Blue' #Blue
+        num4 = randint(0,4)
     
 #circle changes to green
 def green(Event):
