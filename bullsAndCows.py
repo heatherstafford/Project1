@@ -69,7 +69,7 @@ def green(Event):
         data['guess2'] = 'Green'
     elif data['rows'] < 110:
         data['guess3'] = 'Green'
-    elif data['rows'] < 130:
+    elif data['rows'] < 160:
         data['guess4'] = 'Green'
     data['rows'] += 50
     
@@ -83,7 +83,7 @@ def red(Event):
         data['guess2'] = 'Red'
     elif data['rows'] < 110:
         data['guess3'] = 'Red'
-    elif data['rows'] < 130:
+    elif data['rows'] < 160:
         data['guess4'] = 'Red'
     data['rows'] += 50
     
@@ -97,7 +97,7 @@ def yellow(Event):
         data['guess2'] = 'Yellow'
     elif data['rows'] < 110:
         data['guess3'] = 'Yellow'
-    elif data['rows'] < 130:
+    elif data['rows'] < 160:
         data['guess4'] = 'Yellow'
     data['rows'] += 50
     
@@ -111,7 +111,7 @@ def purple(Event):
         data['guess2'] = 'Purple'
     elif data['rows'] < 110:
         data['guess3'] = 'Purple'
-    elif data['rows'] < 130:
+    elif data['rows'] < 160:
         data['guess4'] = 'Purple'
     data['rows'] += 50
  
@@ -125,7 +125,7 @@ def blue(Event):
         data['guess2'] = 'Blue'
     elif data['rows'] < 110:
         data['guess3'] = 'Blue'
-    elif data['rows'] < 130:
+    elif data['rows'] < 160:
         data['guess4'] = 'Blue'
     data['rows'] += 50
 
