@@ -24,7 +24,7 @@ def pickCode():
         data['code1'] = 'Blue' #Blue
     
     num2 = randint(0,4)
-    if num2 != num1:
+    while num2 != num1:
         if num2 == 0: 
             data['code2'] = 'Green' #Green
         elif num2 == 1:
@@ -35,11 +35,9 @@ def pickCode():
             data['code2'] = 'Purple' #Purple
         else:
             data['code2'] = 'Blue' #Blue
-    else:
-        num2 = randint(0,4)
         
     num3 = randint(0,4)
-    if num3 != num1 and num3 != num2:
+    while num3 != num1 and num3 != num2:
         if num3 == 0: 
             data['code3'] = 'Green' #Green
         elif num3 == 1:
@@ -50,11 +48,9 @@ def pickCode():
             data['code3'] = 'Purple' #Purple
         else:
             data['code3'] = 'Blue' #Blue
-    else:
-        num3 = randint(0,4)
         
     num4 = randint(0,4)
-    if num4 != num1 and num4 != num2 and num4 != num3:
+    while num4 != num1 and num4 != num2 and num4 != num3:
         if num4 == 0: 
             data['code4'] = 'Green' #Green
         elif num4 == 1:
@@ -65,8 +61,6 @@ def pickCode():
             data['code4'] = 'Purple' #Purple
         else:
             data['code4'] = 'Blue' #Blue
-    else:
-        num4 = randint(0,4)
     
 #circle changes to green
 def green(Event):
