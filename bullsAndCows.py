@@ -223,10 +223,10 @@ def checkCode4():
 
 #makes the score appear on the screen
 def updateScore():
-    bullScore = TextAsset('Bulls = ' + str(data['bulls'])
-    cowScore = TextAsset('Bulls = ' + str(data['cows'])
-    Sprite(bullScore, (100,200))
-    Sprite(cowScore, (100,200))
+    bullScore = TextAsset('Bulls = ' + str(data['bulls']))
+    cowScore = TextAsset('Cows = ' + str(data['cows']))
+    Sprite(bullScore, (200,200))
+    Sprite(cowScore, (200,150))
 
 
 #sets up and runs the game
