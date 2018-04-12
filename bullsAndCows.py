@@ -38,7 +38,7 @@ def pickCode():
         data['code2'] = 'Blue' #Blue
         
     num3 = randint(0,4)
-    while num3 == num1: num3 == num2:
+    while num3 == num1:
         num3 = randint(0,4)
         while num3 == num2:
             num3 == randint(0,4)
