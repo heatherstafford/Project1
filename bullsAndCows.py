@@ -179,7 +179,43 @@ def checkCode1():
         data['cows'] += 1
     else:
         data['bulls'] += 0
-    print(data['bulls'])
+        
+def checkCode2():
+    if data['code2'] == data['guess2']:
+        data['bulls'] += 1
+    elif data['code2'] == data['guess1']:
+        data['cows'] += 1
+    elif data['code2'] == data['guess3']:
+        data['cows'] += 1
+    elif data['code2'] == data['guess4']:
+        data['cows'] += 1
+    else:
+        data['bulls'] += 0
+
+def checkCode3():
+    if data['code3'] == data['guess3']:
+        data['bulls'] += 1
+    elif data['code3'] == data['guess1']:
+        data['cows'] += 1
+    elif data['code3'] == data['guess2']:
+        data['cows'] += 1
+    elif data['code3'] == data['guess4']:
+        data['cows'] += 1
+    else:
+        data['bulls'] += 0
+
+def checkCode4():
+    if data['code4'] == data['guess4']:
+        data['bulls'] += 1
+    elif data['code4'] == data['guess1']:
+        data['cows'] += 1
+    elif data['code4'] == data['guess2']:
+        data['cows'] += 1
+    elif data['code4'] == data['guess3']:
+        data['cows'] += 1
+    else:
+        data['bulls'] += 0
+    
     
 def checkCows():
     if data['code1'] == data['guess2']:
