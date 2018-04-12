@@ -250,6 +250,8 @@ if __name__ == '__main__':
     data['guess4'] = ''
 
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
+    bullScore = TextAsset('Bulls = ' + str(data['bulls']))
+    cowScore = TextAsset('Cows = ' + str(data['cows']))
     data['bullscore'] = Sprite(bullScore, (200,200))
     data['cowscore'] = Sprite(cowScore, (200,150))
     
