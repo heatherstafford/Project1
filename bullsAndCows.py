@@ -72,7 +72,7 @@ def green(Event):
     while data['rows'] < 110:
         data['guess3'] = 'Green'
         break
-    while data['rows'] < 130:
+    while data['rows'] < 160:
         data['guess4'] = 'Green'
         break
     while data['rows'] < 120:
