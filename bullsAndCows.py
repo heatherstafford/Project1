@@ -220,10 +220,10 @@ def checkCode4():
 def updateScore():
     data['cows'] += 1
     data['bulls'] += 1
-    data['cowText'].destroy() #remove old writing
-    data['bullsText'].destroy()
-    bullScoreBox = TextAsset('Bulls = ' + str(data['bulls']))
-    cowScoreBox = TextAsset('Cows = ' + str(data['cows']))
+    data['cowScoreText'].destroy() #remove old writing
+    data['bullScoreText'].destroy()
+    bullBox = TextAsset('Bulls = ' + str(data['bulls']))
+    cowBox = TextAsset('Cows = ' + str(data['cows']))
 
 #sets up and runs the game
 if __name__ == '__main__': 
@@ -251,8 +251,10 @@ if __name__ == '__main__':
         for j in range(10):
             Sprite(circle,(10 + (2*RADIUS+10)*i,10 + (2*RADIUS+10)*j)) #putting a row of dots
     
-    data['bullScoreText'] = Sprite(bullBox,(100, 100))
-    data['cowScoreText'] = Sprite(cowBox,(100, 100))
+    bullBox = TextAsset('Bulls = ' + str(data['bulls']))
+    cowBox = TextAsset('Cows = ' + str(data['cows']))
+    data['bullScoreText'] = Sprite(bullBox,(200, 100))
+    data['cowScoreText'] = Sprite(cowBox,(200, 100))
 
     App().listenKeyEvent('keydown','g',green)
     App().listenKeyEvent('keydown','r', red)
