@@ -54,7 +54,7 @@ def pickCode():
         num3 = randint(0,4)
         
     num4 = randint(0,4)
-    if num4 != num1 and num4 =! num2 and num4 != num3:
+    if num4 != num1 and num4 != num2 and num4 != num3:
         if num4 == 0: 
             data['code4'] = 'Green' #Green
         elif num4 == 1:
