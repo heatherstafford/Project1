@@ -244,6 +244,7 @@ if __name__ == '__main__':
     data['guess4'] = ''
 
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
+    scoreBox = TextAsset('Bulls = 0 and Cows = 0')
     
     #Creates board of circles
     for i in range(4):
