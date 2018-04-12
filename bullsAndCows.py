@@ -63,81 +63,57 @@ def pickCode():
 def green(Event):
     greenCircle = (CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)), Color(0x006600,1)))
     Sprite(greenCircle,(data['rows'], data['cols']))
-    while data['rows'] < 10:
+    if data['rows'] < 10:
         data['guess1'] = 'Green'
-        break
-    while data['rows'] < 60:
+    elif data['rows'] < 60:
         data['guess2'] = 'Green'
-        break
-    while data['rows'] < 110:
+    elif data['rows'] < 110:
         data['guess3'] = 'Green'
-        break
-    while data['rows'] < 160:
+    elif data['rows'] < 130:
         data['guess4'] = 'Green'
-        break
-    while data['rows'] < 120:
-        data['rows'] += 50
-        break
+    data['rows'] += 50
     
 #circle changes to red
 def red(Event):
     redCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xFF0000,1)))
     Sprite(redCircle,(data['rows'], data['cols']))
-    while data['rows'] < 10:
+    if data['rows'] < 10:
         data['guess1'] = 'Red'
-        break
-    while data['rows'] < 60:
+    elif data['rows'] < 60:
         data['guess2'] = 'Red'
-        break
-    while data['rows'] < 110:
+    elif data['rows'] < 110:
         data['guess3'] = 'Red'
-        break
-    while data['rows'] < 130:
+    elif data['rows'] < 130:
         data['guess4'] = 'Red'
-        break
-    while data['rows'] < 120:
-        data['rows'] += 50
-        break
+    data['rows'] += 50
     
 #circle changes to yellow
 def yellow(Event):
     yellowCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)),Color(0xFFFF00,1)))
     Sprite(yellowCircle,(data['rows'], data['cols']))
-    while data['rows'] < 10:
+    if data['rows'] < 10:
         data['guess1'] = 'Yellow'
-        break
-    while data['rows'] < 60:
+    elif data['rows'] < 60:
         data['guess2'] = 'Yellow'
-        break
-    while data['rows'] < 110:
+    elif data['rows'] < 110:
         data['guess3'] = 'Yellow'
-        break
-    while data['rows'] < 130:
+    elif data['rows'] < 130:
         data['guess4'] = 'Yellow'
-        break
-    while data['rows'] < 120:
-        data['rows'] += 50
-        break
+    data['rows'] += 50
     
 #circle changes to purple
 def purple(Event):
     purpleCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xc300ff,1)))
     Sprite(purpleCircle,(data['rows'], data['cols']))
-    while data['rows'] < 10:
+    if data['rows'] < 10:
         data['guess1'] = 'Purple'
-        break
-    while data['rows'] < 60:
+    elif data['rows'] < 60:
         data['guess2'] = 'Purple'
-        break
-    while data['rows'] < 110:
+    elif data['rows'] < 110:
         data['guess3'] = 'Purple'
-        break
-    while data['rows'] < 130:
+    elif data['rows'] < 130:
         data['guess4'] = 'Purple'
-        break
-    while data['rows'] < 120:
-        data['rows'] += 50
-        break
+    data['rows'] += 50
  
 #circle changes to blue   
 def blue(Event):
