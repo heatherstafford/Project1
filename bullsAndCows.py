@@ -24,7 +24,7 @@ def pickCode():
         data['code1'] = 'Blue' #Blue
     
     num2 = randint(0,4)
-    while num2 = num1:
+    while num2 == num1:
         num2 = randint(0,4)
     if num2 == 0:
         data['code2'] = 'Green' #Green
@@ -38,7 +38,7 @@ def pickCode():
         data['code2'] = 'Blue' #Blue
         
     num3 = randint(0,4)
-    while num3 = num1 and num3 = num2:
+    while num3 == num1 and num3 == num2:
         num3 = randint(0,4)
     if num3 == 0: 
         data['code3'] = 'Green' #Green
@@ -52,7 +52,7 @@ def pickCode():
         data['code3'] = 'Blue' #Blue
         
     num4 = randint(0,4)
-    while num4 = num1 and num4 = num2 and num4 = num3:
+    while num4 == num1 and num4 == num2 and num4 == num3:
         num4 = randint(0,4)
     if num4 == 0: 
         data['code4'] = 'Green' #Green
