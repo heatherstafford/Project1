@@ -63,13 +63,13 @@ def pickCode():
 def green(Event):
     greenCircle = (CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)), Color(0x006600,1)))
     Sprite(greenCircle,(data['rows'], data['cols']))
-    if data['rows'] < 10:
+    if data['rows'] < 11:
         data['guess1'] = 'Green'
-    elif data['rows'] < 60:
+    elif data['rows'] < 61:
         data['guess2'] = 'Green'
-    elif data['rows'] < 110:
+    elif data['rows'] < 111:
         data['guess3'] = 'Green'
-    elif data['rows'] < 160:
+    elif data['rows'] < 161:
         data['guess4'] = 'Green'
     data['rows'] += 50
     
@@ -77,13 +77,13 @@ def green(Event):
 def red(Event):
     redCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xFF0000,1)))
     Sprite(redCircle,(data['rows'], data['cols']))
-    if data['rows'] < 10:
+    if data['rows'] < 11:
         data['guess1'] = 'Red'
-    elif data['rows'] < 60:
+    elif data['rows'] < 61:
         data['guess2'] = 'Red'
-    elif data['rows'] < 110:
+    elif data['rows'] < 111:
         data['guess3'] = 'Red'
-    elif data['rows'] < 160:
+    elif data['rows'] < 161:
         data['guess4'] = 'Red'
     data['rows'] += 50
     
@@ -91,13 +91,13 @@ def red(Event):
 def yellow(Event):
     yellowCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)),Color(0xFFFF00,1)))
     Sprite(yellowCircle,(data['rows'], data['cols']))
-    if data['rows'] < 10:
+    if data['rows'] < 11:
         data['guess1'] = 'Yellow'
-    elif data['rows'] < 60:
+    elif data['rows'] < 61:
         data['guess2'] = 'Yellow'
-    elif data['rows'] < 110:
+    elif data['rows'] < 111:
         data['guess3'] = 'Yellow'
-    elif data['rows'] < 160:
+    elif data['rows'] < 161:
         data['guess4'] = 'Yellow'
     data['rows'] += 50
     
@@ -105,13 +105,13 @@ def yellow(Event):
 def purple(Event):
     purpleCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xc300ff,1)))
     Sprite(purpleCircle,(data['rows'], data['cols']))
-    if data['rows'] < 10:
+    if data['rows'] < 11:
         data['guess1'] = 'Purple'
-    elif data['rows'] < 60:
+    elif data['rows'] < 61:
         data['guess2'] = 'Purple'
-    elif data['rows'] < 110:
+    elif data['rows'] < 111:
         data['guess3'] = 'Purple'
-    elif data['rows'] < 160:
+    elif data['rows'] < 161:
         data['guess4'] = 'Purple'
     data['rows'] += 50
  
@@ -119,13 +119,13 @@ def purple(Event):
 def blue(Event):
     blueCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0x003bff,1)))
     Sprite(blueCircle,(data['rows'], data['cols']))
-    if data['rows'] < 10:
+    if data['rows'] < 11:
         data['guess1'] = 'Blue'
-    elif data['rows'] < 60:
+    elif data['rows'] < 61:
         data['guess2'] = 'Blue'
-    elif data['rows'] < 110:
+    elif data['rows'] < 111:
         data['guess3'] = 'Blue'
-    elif data['rows'] < 160:
+    elif data['rows'] < 161:
         data['guess4'] = 'Blue'
     data['rows'] += 50
 
