@@ -251,8 +251,8 @@ if __name__ == '__main__':
         for j in range(10):
             Sprite(circle,(10 + (2*RADIUS+10)*i,10 + (2*RADIUS+10)*j)) #putting a row of dots
     
-    bullBox = TextAsset('Bulls = ' + str(data['bulls']))
-    cowBox = TextAsset('Cows = ' + str(data['cows']))
+    data['bullBox'] = TextAsset('Bulls = ' + str(data['bulls']))
+    data['cowBox'] = TextAsset('Cows = ' + str(data['cows']))
     data['bullScoreText'] = Sprite(bullBox,(200, 200))
     data['cowScoreText'] = Sprite(cowBox,(200, 100))
 
