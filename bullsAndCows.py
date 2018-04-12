@@ -243,7 +243,6 @@ if __name__ == '__main__':
     data['guess3'] = ''
     data['guess4'] = ''
 
-
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
     
     #Creates board of circles
@@ -251,8 +250,6 @@ if __name__ == '__main__':
         for j in range(10):
             Sprite(circle,(10 + (2*RADIUS+10)*i,10 + (2*RADIUS+10)*j)) #putting a row of dots
     
-    bullBox = TextAsset('Bulls = 0')
-    cowBox = TextAsset('Cows = 0')
     data['bullScoreText'] = Sprite(bullBox,(100, 100))
     data['cowScoreText'] = Sprite(cowBox,(100, 100))
 
