@@ -220,8 +220,8 @@ def checkCode4():
 def updateScore():
     data['cows'] += 1
     data['bulls'] += 1
-    data['cowScoreText'].destroy() #remove old writing
-    data['bullScoreText'].destroy()
+    data['cowbox'].destroy() #remove old writing
+    data['bullbox'].destroy()
     bullBox = TextAsset('Bulls = ' + str(data['bulls']))
     cowBox = TextAsset('Cows = ' + str(data['cows']))
 
@@ -253,7 +253,7 @@ if __name__ == '__main__':
     
     bullBox = TextAsset('Bulls = ' + str(data['bulls']))
     cowBox = TextAsset('Cows = ' + str(data['cows']))
-    data['bullScoreText'] = Sprite(bullBox,(200, 100))
+    data['bullScoreText'] = Sprite(bullBox,(200, 200))
     data['cowScoreText'] = Sprite(cowBox,(200, 100))
 
     App().listenKeyEvent('keydown','g',green)
