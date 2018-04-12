@@ -159,6 +159,7 @@ def blue(Event):
         data['rows'] += 50
         break
 
+#Makes the computer check the codes and move where the person is entering the color when enter is pressed
 def enter(Event):
     checkCode1()
     checkCode2()
@@ -168,7 +169,7 @@ def enter(Event):
     data['rows'] -= 150
     updateScore()
     
-#checks to see if the computers code is the same as the one entered
+#Checks the entered 1st color with the computers code
 def checkCode1():
     if data['code1'] == data['guess1']:
         data['bulls'] += 1
@@ -181,6 +182,7 @@ def checkCode1():
     else:
         data['bulls'] += 0
         
+#Checks the entered 2nd color with the computers code
 def checkCode2():
     if data['code2'] == data['guess2']:
         data['bulls'] += 1
@@ -193,6 +195,7 @@ def checkCode2():
     else:
         data['bulls'] += 0
 
+#Checks the entered 3rd color with the computers code
 def checkCode3():
     if data['code3'] == data['guess3']:
         data['bulls'] += 1
@@ -205,6 +208,7 @@ def checkCode3():
     else:
         data['bulls'] += 0
 
+#Checks the entered 4th color with the computers code
 def checkCode4():
     if data['code4'] == data['guess4']:
         data['bulls'] += 1
@@ -217,10 +221,12 @@ def checkCode4():
     else:
         data['bulls'] += 0
 
-
+#makes the score appear on the screen
 def updateScore():
     bullScore = TextAsset('Bulls = ' + str(data['bulls'])
     cowScore = TextAsset('Bulls = ' + str(data['cows'])
+    Sprite(bullScore, (100,200))
+    Sprite(cowScore, (100,200))
 
 
 #sets up and runs the game
@@ -242,9 +248,6 @@ if __name__ == '__main__':
     data['guess4'] = ''
 
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
-    
-    Sprite(bullScore, (100,200))
-    Sprite(cowScore, (100,200))
     
     #Creates board of circles
     for i in range(4):
