@@ -217,15 +217,11 @@ def checkCode4():
     else:
         data['bulls'] += 0
 
-"""
+
 def updateScore():
-    data['cows'] += 1
-    data['bulls'] += 1
-    data['cowScoreText'].destroy() #remove old writing
-    data['bullScoreText'].destroy()
-    bullBox = TextAsset('Bulls = ' + str(data['bulls']))
-    cowBox = TextAsset('Cows = ' + str(data['cows']))
-"""
+    bullScore = TextAsset('Bulls = ' + str(data['bulls'])
+    cowScore = TextAsset('Bulls = ' + str(data['cows'])
+
 
 #sets up and runs the game
 if __name__ == '__main__': 
@@ -247,18 +243,14 @@ if __name__ == '__main__':
 
     circle = CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)),Color(0xFFFFFF,1))
     
-    scoreBox = TextAsset('Bulls = 0 and Cows = 0')
+    Sprite(bullScore, (100,200))
+    Sprite(cowScore, (100,200))
     
     #Creates board of circles
     for i in range(4):
         for j in range(10):
             Sprite(circle,(10 + (2*RADIUS+10)*i,10 + (2*RADIUS+10)*j)) #putting a row of dots
-    """
-    bullBox = TextAsset('Bulls = ' + str(data['bulls']))
-    cowBox = TextAsset('Cows = ' + str(data['cows']))
-    data['bullScoreText'] = Sprite(bullBox,(200, 200))
-    data['cowScoreText'] = Sprite(cowBox,(200, 100))
-    """
+    
     App().listenKeyEvent('keydown','g',green)
     App().listenKeyEvent('keydown','r', red)
     App().listenKeyEvent('keydown','y', yellow)
