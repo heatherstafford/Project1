@@ -166,6 +166,7 @@ def enter(Event):
     checkCode4()
     data['cols'] += 50
     data['rows'] -= 150
+    updateScore()
     
 #checks to see if the computers code is the same as the one entered
 def checkCode1():
@@ -216,6 +217,13 @@ def checkCode4():
     else:
         data['bulls'] += 0
 
+def updateScore():
+    data['cows'] += 1
+    data['bulls'] += 1
+    data['cowText'].destroy() #remove old writing
+    data['bullsText'].destroy()
+    bullScoreBox = TextAsset('Bulls = ' + str(data['bulls']))
+    cowScoreBox = TextAsset('Cows = ' + str(data['cows']))
 
 #sets up and runs the game
 if __name__ == '__main__': 
@@ -242,6 +250,11 @@ if __name__ == '__main__':
     for i in range(4):
         for j in range(10):
             Sprite(circle,(10 + (2*RADIUS+10)*i,10 + (2*RADIUS+10)*j)) #putting a row of dots
+    
+    bullBox = TextAsset('Bulls = 0')
+    cowBox = TextAsset('Cows = 0')
+    data['bullScoreText'] = Sprite(bullBox,(100, 100))
+    data['cowScoreText'] = Sprite(cowBox,(100, 100))
 
     App().listenKeyEvent('keydown','g',green)
     App().listenKeyEvent('keydown','r', red)
