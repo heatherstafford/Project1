@@ -39,7 +39,6 @@ def pickCode():
         
     num3 = randint(0,4)
     while num3 == num1:
-        num3 = randint(0,4)
         while num3 == num2:
             num3 == randint(0,4)
     if num3 == 0: 
@@ -55,9 +54,7 @@ def pickCode():
         
     num4 = randint(0,4)
     while num4 == num1:
-        num4 = randint(0,4)
         while num4 == num2:
-            randint(0,4)
             while num4 == num3:
                 randint(0,4)
     if num4 == 0: 
