@@ -83,7 +83,8 @@ def green(Event):
 #circle changes to red
 def red(Event):
     redCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xFF0000,1)))
-    Sprite(redCircle,(data['rows'], data['cols']))
+    if data['rows'] < 200:
+        Sprite(redCircle,(data['rows'], data['cols']))
     if data['rows'] < 11:
         data['guess1'] = 'Red'
     elif data['rows'] < 61:
@@ -97,7 +98,8 @@ def red(Event):
 #circle changes to yellow
 def yellow(Event):
     yellowCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)),Color(0xFFFF00,1)))
-    Sprite(yellowCircle,(data['rows'], data['cols']))
+    if data['rows'] <200:
+        Sprite(yellowCircle,(data['rows'], data['cols']))
     if data['rows'] < 11:
         data['guess1'] = 'Yellow'
     elif data['rows'] < 61:
@@ -111,7 +113,8 @@ def yellow(Event):
 #circle changes to purple
 def purple(Event):
     purpleCircle = (CircleAsset(RADIUS,LineStyle(2,Color(0x000000,1)), Color(0xc300ff,1)))
-    Sprite(purpleCircle,(data['rows'], data['cols']))
+    if data['rows'] < 200:
+        Sprite(purpleCircle,(data['rows'], data['cols']))
     if data['rows'] < 11:
         data['guess1'] = 'Purple'
     elif data['rows'] < 61:
