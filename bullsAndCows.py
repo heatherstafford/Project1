@@ -68,7 +68,8 @@ def pickCode():
 #circle changes to green
 def green(Event):
     greenCircle = (CircleAsset(RADIUS, LineStyle(2,Color(0x000000,1)), Color(0x006600,1)))
-    Sprite(greenCircle,(data['rows'], data['cols']))
+    if greenCircle.data['rows'] < 200:
+        Sprite(greenCircle,(data['rows'], data['cols']))
     if data['rows'] < 11:
         data['guess1'] = 'Green'
     elif data['rows'] < 61:
