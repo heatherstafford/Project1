@@ -39,7 +39,7 @@ def pickCode():
         
     num3 = randint(0,4)
     while num3 == num1 or num3 == num2:
-        num3 == randint(0,4)
+        num3 = randint(0,4)
     if num3 == 0: 
         data['code3'] = 'Green' #Green
     elif num3 == 1:
@@ -53,7 +53,7 @@ def pickCode():
         
     num4 = randint(0,4)
     while num4 == num1 or num4 == num2 or num4 == num3:
-        randint(0,4)
+        num4 = randint(0,4)
     if num4 == 0: 
         data['code4'] = 'Green' #Green
     elif num4 == 1:
@@ -247,4 +247,3 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','enter', enter)
     
     App().run()
-    
