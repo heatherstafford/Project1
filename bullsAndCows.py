@@ -229,12 +229,10 @@ if __name__ == '__main__':
     data['cowscore'] = Sprite(cowScore, (200,150))
     pickCode()
     
-    
     print(data['code1'])
     print(data['code2'])
     print(data['code3'])
     print(data['code4'])
-
     
     #Creates board of circles
     for i in range(4):
